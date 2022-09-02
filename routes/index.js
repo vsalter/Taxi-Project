@@ -9,26 +9,25 @@ router.get('/', function(req, res, next) {
 
 router.get('/auth/google', passport.authenticate(
   'google',
-  {scope: ['profile', 'email']}
+  { scope: [
+    'https://www.googleapis.com/auth/userinfo.profile',
+    'https://www.googleapis.com/auth/userinfo.email'
+] }
 ));
 
-
-// Google call back route
-router.get('/oauth2callback', passport.authenticate(
+router.get('/auth/google/oauth2callback', passport.authenticate(
   'google',
   {
-      successRedirect: '/taxi',
-      failureRedirect: '/'
+    successRedirect : 'https://taxi-app-project2.herokuapp.com/taxi',
+    failureRedirect : 'https://taxi-app-project2.herokuapp.com/' 
   }
 ));
 
-
-// Google logout
-router.get('/logout', function (req, res) {
+router.get('/logout', function(req, res){
   req.logout(function(err) {
-      if (err) { return next(err); }
-      res.redirect('/');
-    });
+    if (err) { return next(err); }
+    res.redirect('/');
+  });
 });
 
 
