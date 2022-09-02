@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add a Passenger</title>
+		<link rel="stylesheet" href="/stylesheets/base.css">
+		<link rel="stylesheet" href="/stylesheets/index.css">
+		<link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+	</head>
+    <body>
+        <section class="ticket-details">
+            <h3>Passenger Information</h3>
+            <form id="add-passenger-form"  action="/taxi/<%=taxiId%>/passengers" method="POST">
+                <label>Select Your Seat:</label>
+                <select name="noOfSeats">
+                    <option class="dropdown-item disabled" default>No. of Seats</option>
+                    <option value="1">1</option> 
+                    <option value ="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br>
+                <label>Trip Cost:</label>
+                <select name="cost">
+                    <option class="dropdown-item disabled" default>Cost</option>
+                    <option value="5">$5</option> 
+                    <option value ="10">$10</option>
+                    <option value="15">$15</option>
+                    <option value="20">$20</option>
+                </select><br>
+                <input type="submit" value="Add Passenger">
+            </form>
+        </section>
+    </body>
+</html>
