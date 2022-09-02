@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+	<link rel="stylesheet" href="/stylesheets/index.css">
+	<link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+	</head>
+    <title>New Trip</title>
+</head>
+<body>
+    <h2>Start a New Ride:</h2>
+    <div class="newTaxi">
+    <form action="/taxi/" method="POST">
+    <label>Type of Car:
+        <select name="carType">
+        <option class="dropdown-item disabled" default>Select Car</option>
+        <option value="Sedan gas">Sedan gas</option> 
+        <option value = "Sedan electric">Sedan electric</option>
+        <option value="SUV">SUV</option>
+        </select>
+    </label><br>
+    <label>Pickup City:
+        <select name="pickupCity">
+            <option value="ATL" selected>ATL</option>
+            <option value="Macon">Macon</option>
+            <option value="Marietta">Marietta</option>
+            <option value="Decatur">Decatur</option>
+            <option value="Riverdale">Riverdale</option>
+        </select>
+    </label><br>
+    <label>Pickup Address:
+        <input type="text" name="pickupAddy">
+    </label><br>
+    <label>Pickup Time:
+        <input type="datetime-local" name="departs">
+    </label><br>
+    <label>Dropoff City:</label>
+    <select name="destinationCity">
+        <option value="ATL">ATL</option>
+            <option value="Macon">Macon</option>
+            <option value="Marietta">Marietta</option>
+            <option value="Decatur">Decatur</option>
+            <option value="Riverdale" selected>Riverdale</option>>
+    </select><br>
+    <label>Dropoff Address:
+        <input type="text" name="destAddy">
+    </label><br>
+    <input type="submit" value="Add Taxi">
+    </form>
+    </div>
+</body>
