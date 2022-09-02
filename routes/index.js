@@ -18,8 +18,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/auth/google/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : 'https://taxi-app-project2.herokuapp.com/taxi',
-    failureRedirect : 'https://taxi-app-project2.herokuapp.com/' 
+    successRedirect : '/taxi',
+    failureRedirect : '/' 
   }
 ));
 
