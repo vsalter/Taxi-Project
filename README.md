@@ -1,7 +1,7 @@
 # Project-2: Taxi 
 
 ## Project Information
-This project was apart of my Software Engineering Immersive course at General Assembly. The objective was to create a JavaScript game that met the following requirements:
+This project was apart of my Software Engineering Immersive course at General Assembly. The objective was to create a Node/Express/MongoDB app that met the following requirements:
 
  1. Have at least 2 data entities (data resources) in addition to the User Model.
  2. Use OAuth authentication.
