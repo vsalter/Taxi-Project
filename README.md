@@ -33,9 +33,11 @@ The taxi app allows you to book a trip with the State of Georgia. To book a trip
 ![Screen Shot 2022-09-06 at 11 07 49 AM](https://user-images.githubusercontent.com/59453943/188670676-ccfcc495-1cb1-48e2-a052-1b6e28cfaef0.png)
 
  - To add passengers to your trip, click on the details link then click add passengers. You will land on the add Passengers Information page as shown below:
+ 
 ![Screen Shot 2022-09-06 at 11 10 54 AM](https://user-images.githubusercontent.com/59453943/188671419-8a96331a-325c-48f8-a019-5f506dc87243.png)
 
  - To edit a previous trip, click on the details link then click the edit link. You will land on the edit page as shown below: 
+ 
  ![Screen Shot 2022-09-06 at 11 14 28 AM](https://user-images.githubusercontent.com/59453943/188672070-1d9ae1ac-9837-4226-8e36-f6f225ff346c.png)
 
 
