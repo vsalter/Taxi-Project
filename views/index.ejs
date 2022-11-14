@@ -4,41 +4,176 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><%= title %></title>
-		<!-- <link rel="stylesheet" href="/stylesheets/base.css">
+		<!-- <link rel="stylesheet" href="/stylesheets/base.css"> -->
 		<link rel="stylesheet" href="/stylesheets/index.css">
-		<link rel="stylesheet" href="/stylesheets/login.css">
+		<!-- <link rel="stylesheet" href="/stylesheets/login.css">
     	<link rel="stylesheet" href="/stylesheets/style.css"> -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-		<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>		
-	</head>
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>      
+    </head>
+    <body>
+        <header class="p-3 bg-dark text-white">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                  <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                  <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+        
+                <div class="text-end">
+                  <button type="button" class="btn btn-outline-light me-2">Login</button>
+                  <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+              </div>
+          </header>
+
 	<body>
-		<header class="p-3 bg-dark text-white">
-			  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-		
-				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-				  <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-				  <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-				  <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-				  <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-				  <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-				</ul>
-		
-				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-				  <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-				</form>
-		
-				<div class="text-end">
-				  <button type="button" class="btn btn-outline-light me-2">Login</button>
-				  <button type="button" class="btn btn-warning">Sign-up</button>
+		<main>
+
+			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+			  <div class="carousel-indicators">
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			  </div>
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+		  
+				  <div class="container">
+					<div class="carousel-caption text-start">
+					  <h1>Need a Ride?</h1>
+					  <p>Regardless of the reason, we've got you covered.</p>
+					  <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+					</div>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+		  
+				  <div class="container">
+					<div class="carousel-caption">
+					  <h1>Multiple rides to choose from</h1>
+					  <p>Choose between Sedans, SUVs, Vans, or Limo service to your destination</p>
+					  <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+					</div>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+		  
+				  <div class="container">
+					<div class="carousel-caption text-end">
+					  <h1>Your safety is our highest concern</h1>
+					  <p>Only the safest drivers are on our platform. Vehicles are thoroughly inspected.</p>
+					  <p><a class="btn btn-lg btn-primary" href="#">Learn More</a></p>
+					</div>
+				  </div>
 				</div>
 			  </div>
-		  </header>
-		<section class="prompt">
+			  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			  </button>
+			</div>
+		  
+		  
+			<!-- Marketing messaging and featurettes
+			================================================== -->
+			<!-- Wrap the rest of the page in another container to center all the content. -->
+		  
+			<div class="container marketing">
+		  
+			  <!-- Three columns of text below the carousel -->
+			  <div class="row">
+				<div class="col-lg-4">
+				  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+		  
+				  <h2 class="fw-normal">Anytime, Anywhere</h2>
+				  <p>We offer rides 24/7. 365 days of the year. Had a couple of drinks and need a ride? We got ya. Just landed in a new city and need to get your hotel? No problemo.</p>
+				  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+				  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+		  
+				  <h2 class="fw-normal">Affordable</h2>
+				  <p>Our rates for rides are comparable with competing apps. And often cheaper, with our discount codes.</p>
+				  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+				  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+		  
+				  <h2 class="fw-normal">Concenience</h2>
+				  <p>No need for road rage. No need to worry about navigating traffic. No need to worry about parking. Enjoy being driven to your destination and letting the good times roll.</p>
+				  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+			  </div><!-- /.row -->
+		  
+		  
+			  <!-- START THE FEATURETTES -->
+		  
+			  <hr class="featurette-divider">
+		  
+			  <div class="row featurette">
+				<div class="col-md-7">
+				  <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+				  <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+				</div>
+				<div class="col-md-5">
+				  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+		  
+				</div>
+			  </div>
+		  
+			  <hr class="featurette-divider">
+		  
+			  <div class="row featurette">
+				<div class="col-md-7 order-md-2">
+				  <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+				  <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+				</div>
+				<div class="col-md-5 order-md-1">
+				  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+		  
+				</div>
+			  </div>
+		  
+			  <hr class="featurette-divider">
+		  
+			  <div class="row featurette">
+				<div class="col-md-7">
+				  <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+				  <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+				</div>
+				<div class="col-md-5">
+				  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+		  
+				</div>
+			  </div>
+		  
+			  <hr class="featurette-divider">
+		  
+			  <!-- /END THE FEATURETTES -->
+		  
+			</div><!-- /.container -->
+		  
+		  
+		
+			<footer class="container">
+			  <p class="float-end"><a href="#">Back to top</a></p>
+			</footer>
+		  </main>
+		<!-- <section class="prompt">
 			<h3>Taxi</h3>
 			<h1>Use your Google account to sign in below:</h1>
 			<hr>
 			<a href="/auth/google" id="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-		</section>
+		</section> -->
 		<footer>
 			
 		</footer>
