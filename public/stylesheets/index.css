@@ -56,6 +56,11 @@ body {
     margin-right: 0;
   }
   
+  .roundedCircles {
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+  }
   
   /* MARKETING CONTENT
   -------------------------------------------------- */
