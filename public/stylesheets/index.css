@@ -47,6 +47,13 @@ body {
 
   .carousel-control-next {
 	filter: invert(100%);
+  padding-right: 0;
+  margin-right: 0;
+  }
+
+  #next {
+    padding-right: 0;
+    margin-right: 0;
   }
   
   
