@@ -43,19 +43,18 @@ body {
 
   .carousel-control-prev {
 	filter: invert(100%);
+  max-width: 40px;
   }
 
   .carousel-control-next {
 	filter: invert(100%);
-  padding-right: 0;
-  margin-right: 0;
-  }
-
-  #next {
-    padding-right: 0;
-    margin-right: 0;
+  max-width: 40px;
   }
   
+  #thirdCaption {
+    right: 7%;
+  }
+
   .roundedCircles {
     border-radius: 50%;
     height: 140px;
