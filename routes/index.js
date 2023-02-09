@@ -19,6 +19,10 @@ router.get('/help', function(req, res, next) {
   res.render('help', { title: 'Goober Help' });
 });
 
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'Sign Up For Goober!' });
+});
+
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: [
