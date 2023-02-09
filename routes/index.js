@@ -7,6 +7,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Goober' });
 });
 
+router.get('/faqs', function(req, res, next) {
+  res.render('faqs', { title: 'Goober FAQs' });
+});
+
+
+
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: [
