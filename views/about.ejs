@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= title %></title>
+		<!-- <link rel="stylesheet" href="/stylesheets/base.css"> -->
+		<link rel="stylesheet" href="/stylesheets/index.css">
+		<!-- <link rel="stylesheet" href="/stylesheets/login.css">
+    	<link rel="stylesheet" href="/stylesheets/style.css"> -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>      
+    </head>
+    <body>
+        <header class="p-3 bg-dark text-white">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="./about" class="nav-link px-2 text-white">About</a></li>
+                  <li><a href="./faqs" class="nav-link px-2 text-white">FAQs</a></li>
+                  <li><a href="#" class="nav-link px-2 text-white">Help</a></li>
+                </ul>
+        
+				<h1 id="logo"><a class="navbar-brand" href="/">Goober</a></h1>
+				
+                <div class="text-end">
+				  <a href="/auth/google" id="login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                  <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+              </div>
+        </header>
+
+	
+		<!-- <main>
+
+			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+			  <div class="carousel-indicators">
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			  </div>
+			  <div class="carousel-inner">
+				<div class="carousel-item active">
+				  <img id="carousel1" src="/images/AnywhereMovies.jpg" class="img-fluid" alt="Responsive image">
+		  
+				  <div class="container">
+					<div class="carousel-caption text-start">
+					  <h1>Need a Ride?</h1>
+					  <p>Regardless of the reason, we've got you covered.</p>
+					  <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+					</div>
+				  </div>
+				</div>
+				<div class="carousel-item">
+				  <img id="carousel1" src="/images/AnyCar2.jpg" class="img-fluid" alt="Responsive image">
+		  
+				  <div class="container">
+					<div class="carousel-caption">
+					  <h1>Multiple rides to choose from</h1>
+					  <p>Choose between Sedans, SUVs, Vans, or Limo service to your destination</p>
+					  <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+					</div>
+				  </div>
+				</div>
+				<div class="carousel-item">
+					<img id="carousel1" src="/images/Checklist3.jpg" class="img-fluid" alt="Responsive image">
+		  
+				  <div class="container">
+					<div id="thirdCaption" class="carousel-caption text-end">
+					  <h1>Your safety is our highest concern</h1>
+					  <p>Only the safest drivers are on our platform. Vehicles are thoroughly inspected.</p>
+					  <p><a class="btn btn-lg btn-primary" href="#">Learn More</a></p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				<span id="next" class="carousel-control-next-icon" aria-hidden="true"></span>
+				
+			  </button>
+			</div>
+		  
+		  
+			
+		  
+			<div class="container marketing">
+		  
+			  
+			  <div class="row">
+				<div class="col-lg-4">
+				  <img class="roundedCircles" src="/images/247.jpeg" alt="Responsive image">
+
+				  <h2 class="fw-normal">Anytime, Anywhere</h2>
+				  <p>We offer rides 24/7. 365 days of the year. Had a couple of drinks and need a ride? We got ya. Just landed in a new city and need to get your hotel? No problemo.</p>
+				  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+				</div>
+				<div class="col-lg-4">
+				  <img class="roundedCircles" src="/images/affordable.jpg" alt="Responsive image">
+		  
+				  <h2 class="fw-normal">Affordable</h2>
+				  <p>Our rates for rides are comparable with competing apps. And often cheaper, with our discount codes.</p>
+				  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+				</div>
+				<div class="col-lg-4">
+				  <img class="roundedCircles" src="/images/Convenience.jpg" alt="Responsive image">
+
+				  <h2 class="fw-normal">Convenience</h2>
+				  <p>No need for road rage. No need to worry about navigating traffic. No need to worry about parking. Enjoy being driven to your destination and letting the good times roll.</p>
+				  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+				</div>
+			  </div>
+		  
+		  
+			 
+		  
+			  <hr class="featurette-divider">
+		  
+			  <div class="row featurette">
+				<div class="col-md-7">
+				  <h2 class="featurette-heading fw-normal lh-1">Wherever your travels lead you. <span class="text-muted">We'll be there</span></h2>
+				  <p class="lead">We have drivers all over the world to help you navigate any city. The app is available worldwide in thousands of cities. </p>
+				</div>
+				<div class="col-md-5">
+					<img src="/images/AirportGoober.jpg" class="img-fluid" alt="Responsive image">
+		  
+				</div>
+			  </div>
+		  
+			  <hr class="featurette-divider">
+		  
+			  <div class="row featurette">
+				<div class="col-md-7 order-md-2">
+				  <h2 class="featurette-heading fw-normal lh-1">Our Safety guarantee travels with you.<span class="text-muted"> The scenery may change but our standards don't.</span></h2>
+				  <p class="lead">Regardles of the city. Background checks are performed on all drivers. All of our vehicles have to pass a thorough inspection before being put on the road.</p>
+				</div>
+				<div class="col-md-5 order-md-1">
+					<img src="/images/safetyImage.jpeg" class="img-fluid" alt="Responsive image">
+		  
+				</div>
+			  </div>
+		  
+			  <hr class="featurette-divider">
+		  
+			  <div class="row featurette">
+				<div class="col-md-7">
+				  <h2 class="featurette-heading fw-normal lh-1">Plan Ahead. <span class="text-muted">Reserve a ride for a future date.</span></h2>
+				  <p class="lead">For those times you know a ride will be needed ahead of time, we give you the option to plan future rides. </p>
+				</div>
+				<div class="col-md-5">
+					<img src="/images/ReserveRide.jpeg" class="img-fluid" alt="Responsive image">
+		  
+				</div>
+			  </div>
+		  
+			  <hr class="featurette-divider">
+		  
+			
+		  
+			</div>
+		  
+		  
+		
+			<footer class="container">
+			  <p class="float-end"><a href="#">Back to top</a></p>
+			</footer>
+		  </main>
+		 <section class="prompt">
+			<h3>Taxi</h3>
+			<h1>Use your Google account to sign in below:</h1>
+			<hr>
+			<a href="/auth/google" id="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+		</section> -->
+		<footer>
+			
+		</footer>
+	</body>
+</html>

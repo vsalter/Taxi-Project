@@ -11,7 +11,9 @@ router.get('/faqs', function(req, res, next) {
   res.render('faqs', { title: 'Goober FAQs' });
 });
 
-
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'About Goober' });
+});
 
 router.get('/auth/google', passport.authenticate(
   'google',
