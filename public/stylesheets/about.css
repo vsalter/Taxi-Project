@@ -1,0 +1,14 @@
+#about {
+  min-height: 100%;
+}
+
+#v-pills-tab {
+  padding: 2%;
+  border-right: 2px solid black;
+  min-height: 100%;
+}
+
+#v-pills-home-tab {
+  margin-bottom: 10px;
+  width: 150px;
+}
