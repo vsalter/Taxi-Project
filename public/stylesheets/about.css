@@ -12,3 +12,19 @@
   margin-bottom: 10px;
   width: 150px;
 }
+
+#v-pills-home {
+  text-indent: 50px;
+}
+
+#aboutP2 {
+  text-indent: 50px;
+}
+
+#v-pills-profile {
+  text-indent: 50px;
+}
+
+#v-pills-tabContent {
+  padding: 2% 15% 5% 10%;
+}
