@@ -11,6 +11,23 @@
 #v-pills-home-tab {
   margin-bottom: 10px;
   width: 150px;
+  color: black;
+}
+
+#v-pills-home-tab.active {
+  margin-bottom: 10px;
+  width: 150px;
+  color: white;
+  background-color: black;
+}
+
+#v-pills-profile-tab {
+  color: black;
+}
+
+#v-pills-profile-tab.active {
+  color: black;
+  background-color: #ffc107;
 }
 
 #v-pills-home {
@@ -32,3 +49,4 @@
   font-style: normal;
   font-size: 30px;
 }
+
