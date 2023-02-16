@@ -27,4 +27,8 @@
 
 #v-pills-tabContent {
   padding: 2% 15% 5% 10%;
+  font-family: "refrigerator-deluxe", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
 }
