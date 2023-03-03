@@ -24,7 +24,7 @@
 				<h1 id="logo"><a class="navbar-brand" href="/">Goober</a></h1>
 				
                 <div class="text-end">
-				  <a href="./login" id="login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+				  <a href="/auth/google" id="login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
                   <button type="button" class="btn btn-warning">Sign-up</button>
                 </div>
               </div>
@@ -34,25 +34,17 @@
 		<main>
 			<div>
                 <div className="form-container">
-                    <form autoComplete="off" onSubmit={this.handleSubmit}>
-                        <label>Name</label>
-                        <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required/>
+                    <form autoComplete="off" onSubmit={handleSubmit}>
                         <label>Email</label>
-                        <input type="email" name="email" value={this.state.email} onChange={this.handleChange}
-                               required/>
+                        <input type="text" name="email" value={credentials.email} onChange={handleChange} required/>
                         <label>Password</label>
-                        <input type="password" name="password" value={this.state.password} onChange={this.handleChange}
+                        <input type="password" name="password" value={credentials.password} onChange={handleChange}
                                required/>
-                        <label>Confirm</label>
-                        <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange}
-                               required/>
-                        <button type="submit" disabled={disable}>SIGN UP</button>
+                        <button type="submit">LOG IN</button>
                     </form>
-					<br>
-					or
-					<br>
-					<a href="/auth/google" id="login"><button type="button" class="btn btn-outline-light me-2">Sign Up With Google</button></a>
-				</div>
+                </div>
+                <p className="error-message">&nbsp;{error}</p>
+            </div>
 		</main>	
 		<footer>
 			

@@ -23,6 +23,10 @@ router.get('/signup', function(req, res, next) {
   res.render('signup', { title: 'Sign Up For Goober!' });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Log in to your account' });
+});
+
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: [
