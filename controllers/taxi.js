@@ -1,8 +1,9 @@
 const Taxi = require('../models/taxi');
 const Passenger = require('../models/passenger');
+const User = require('../models/user')
 
 function index(req, res){
-    Taxi.find({}, function(err, taxis){
+    Taxi.find({userEmail: req.user.email}, function(err, taxis){
         if (err) return res.redirect('/');
         res.render('taxi/index',{taxis})
     });
