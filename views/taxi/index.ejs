@@ -14,65 +14,65 @@
     <title>Welcome</title>
 </head>
 <body>
-    <nav>
-        <% if (user) { %>
-            success! Signed in<br><br>
-            <h2>Your Trips:</h2><br>
+    <%- include('../partials/header') %>
+    <% if (user) { %>
+        success! Signed in<br><br>
+        <h2>Your Trips:</h2><br>
 
-            <title>Trips List</title>
-            <table class="table">
-            <thead>
-                <tr>
-                <th>User Name</th>
-                <th>Car Type</th>
-                <th>Pickup City</th>
-                <th>Pickup Address</th>
-                <th>Trip Date</th>
-                <th>Trip Details</th>
-                <th>Delete Trip Information</th>
-                </tr>
-            </thead>
-            <tbody>
-            <!-- Write the line of EJS to iterate over taxis using forEach -->                   
-            <% taxis.forEach(function(t) { 
-            let today = new Date()
-            let tripDate = t.departs
-            if (today > tripDate){
-            %>             
-                <tr>
-                    <td><%= t.userName %></td>
-                    <td><%= t.carType %></td>
-                    <td><%= t.pickupCity %></td>
-                    <td><%= t.pickupAddy %></td>
-                    <td><%= t.departs %></td>
-                    <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
-                    <td>
-                        <form action="/taxi/<%= t._id %>?_method=DELETE" method="POST" id="deleteTrip">
-                        <button type="submit" form="deleteTrip">DELETE</button>
-                        </form>
-                    </td>
-                </tr>            
-                <% } else { %>
-                <tr>
-                    <td><%= t.carType %></td>
-                    <td><%= t.pickupCity %></td>
-                    <td><%= t.pickupAddy %></td>
-                    <td><%= t.departs %></td>
-                    <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
-                    <td>
-                        <form action="/taxi/<%= t.id %>?_method=DELETE" method="POST" class="delete">
-                        <button type="submit">DELETE</button>
-                        </form>
-                    </td>
-                </tr>   
-                <% }}); %>
-            </tbody>
-            </table>
-                <button><a href="/taxi/new">Add Taxi</a></button><br><br>
-                <a href="/logout">LOG OUT</a>
-        <% } else { %>
-            <a href="/auth/google" id="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
-    </nav>
+        <title>Trips List</title>
+        <table class="table">
+        <thead>
+            <tr>
+            <th>User Name</th>
+            <th>Car Type</th>
+            <th>Pickup City</th>
+            <th>Pickup Address</th>
+            <th>Trip Date</th>
+            <th>Trip Details</th>
+            <th>Delete Trip Information</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- Write the line of EJS to iterate over taxis using forEach -->                   
+        <% taxis.forEach(function(t) { 
+        let today = new Date()
+        let tripDate = t.departs
+        if (today > tripDate){
+        %>             
+            <tr>
+                <td><%= t.userName %></td>
+                <td><%= t.carType %></td>
+                <td><%= t.pickupCity %></td>
+                <td><%= t.pickupAddy %></td>
+                <td><%= t.departs %></td>
+                <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
+                <td>
+                    <form action="/taxi/<%= t._id %>?_method=DELETE" method="POST" id="deleteTrip">
+                    <button type="submit" form="deleteTrip">DELETE</button>
+                    </form>
+                </td>
+            </tr>            
+            <% } else { %>
+            <tr>
+                <td><%= t.carType %></td>
+                <td><%= t.pickupCity %></td>
+                <td><%= t.pickupAddy %></td>
+                <td><%= t.departs %></td>
+                <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
+                <td>
+                    <form action="/taxi/<%= t.id %>?_method=DELETE" method="POST" class="delete">
+                    <button type="submit">DELETE</button>
+                    </form>
+                </td>
+            </tr>   
+            <% }}); %>
+        </tbody>
+        </table>
+            <button><a href="/taxi/new">Add Taxi</a></button><br><br>
+            <a href="/logout">LOG OUT</a>
+    <% } else { %>
+        <a href="/auth/google" id="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <% } %>
+    
 </body>
 </html>
