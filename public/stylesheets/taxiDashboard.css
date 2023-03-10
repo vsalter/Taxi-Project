@@ -441,6 +441,7 @@ legend + * {
 }
 
 [type=search] {
+  display: none;
   outline-offset: -2px;
   -webkit-appearance: textfield;
 }
@@ -2192,6 +2193,7 @@ progress {
   font-size: 0.875em;
   color: #6c757d;
 }
+
 
 .form-control, .dataTable-input {
   display: block;
