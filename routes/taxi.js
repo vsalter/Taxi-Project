@@ -5,6 +5,7 @@ const isLoggedIn = require('../config/auth');
 
 /* GET users listing. */
 router.get('/', isLoggedIn, taxiCtrl.index);
+router.get('/index2', isLoggedIn, taxiCtrl.index2);
 router.get('/new', isLoggedIn, taxiCtrl.new);
 router.get('/:id', isLoggedIn, taxiCtrl.show);
 router.post('/', isLoggedIn, taxiCtrl.create);

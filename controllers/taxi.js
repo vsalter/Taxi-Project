@@ -17,6 +17,13 @@ function show(req, res) {
     });
 }
 
+function index2(req, res){
+    Taxi.find({userEmail: req.user.email}, function(err, taxis){
+        if (err) return res.redirect('/');
+        res.render('taxi/index2',{taxis})
+    });
+}
+
 function newTaxi(req, res){
     res.render('taxi/new');
 }
@@ -62,5 +69,6 @@ module.exports = {
     show,
     delete: deleteTaxi,
     edit, 
-    update
+    update,
+    index2
 };
