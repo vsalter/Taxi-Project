@@ -2748,7 +2748,7 @@ textarea.form-control-lg {
 
 .input-group {
   position: relative;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;

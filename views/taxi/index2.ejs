@@ -72,11 +72,11 @@
                                     <tbody>
                                         <% taxis.forEach(function(t) { %>
                                         <tr>
-                                            <td><%= t.userName %></td>
-                                            <td><%= t.carType %></td>
-                                            <td><%= t.pickupCity %></td>
-                                            <td><%= t.pickupAddy %></td>
-                                            <td><%= t.departs %></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.userName %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.carType %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.pickupCity %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.pickupAddy %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.departs %></a></td>
                                         </tr>
                                         <% }); %>
                                     </tbody>
