@@ -1,77 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/base.css">
-	  <link rel="stylesheet" href="/stylesheets/index.css">
-	  <link rel="stylesheet" href="/stylesheets/login.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </head>
-    <title>Trip Details</title>
-</head>
-<body>
-  <%- include('../partials/header2') %>
+<%- include('../partials/userHeader') %>
 
-  <div class="currentTaxi">
-    <table class="table">
-        <thead>
-            <tr>
-            <th>User Name:</th>
-            <th>User Email:</th>
-            <th>Type of Car</th>
-            <th>Pickup Address</th>
-            <th>Pickup City</th>
-            <th>Time of Trip</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><%= taxi.userName %></td>
-                <td><%= taxi.userEmail %></td>
-                <td><%= taxi.carType %></td>
-                <td><%= taxi.pickupAddy %></td>
-                <td><%= taxi.pickupCity %></td>
-                <td><%= taxi.departs %></td>
-                <td><a href="/taxi/<%= taxi._id %>/update">Edit Trip</a></td>
-            </tr> 
-    </tbody>
-    </table>
-    </div><br>
-    <div class="passenger-info">
-      <% if (passengers.length) { %>
-        <h2>Passengers:</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Seats</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% passengers.forEach(function(p) { %>
-              <tr>
-                <td><%= p.noOfSeats %></td>
-                <td>$<%= p.cost %></td>
-              <td>
-              <form action="/passengers/<%= p._id %>?_method=DELETE" method="POST">
-                <input id="delete-passenger" type="submit" name="" value="Delete Passenger"> 
-              </form>
-              </td>
-            </tr>
-            <% }); %>
-          </tbody>
-        </table> <br>
-      <% } else { %>
-        <h3>No Passenger Information Availiable <button><a href="/taxi/<%= taxi._id %>/passengers/new">Add Passengers</a></button></h5>
-      <% } %>
-    </div>
+        <div class="currentTaxi">
+          <table class="table">
+              <thead>
+                  <tr>
+                  <th>User Name:</th>
+                  <th>User Email:</th>
+                  <th>Type of Car</th>
+                  <th>Pickup Address</th>
+                  <th>Pickup City</th>
+                  <th>Time of Trip</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><%= taxi.userName %></td>
+                      <td><%= taxi.userEmail %></td>
+                      <td><%= taxi.carType %></td>
+                      <td><%= taxi.pickupAddy %></td>
+                      <td><%= taxi.pickupCity %></td>
+                      <td><%= taxi.departs %></td>
+                      <td><a href="/taxi/<%= taxi._id %>/update">Edit Trip</a></td>
+                  </tr> 
+              </tbody>
+          </table>
+        </div><br>
+        <div class="passenger-info">
+            <% if (passengers.length) { %>
+              <h2>Passengers:</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Seats</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% passengers.forEach(function(p) { %>
+                    <tr>
+                      <td><%= p.noOfSeats %></td>
+                      <td>$<%= p.cost %></td>
+                    <td>
+                    <form action="/passengers/<%= p._id %>?_method=DELETE" method="POST">
+                      <input id="delete-passenger" type="submit" name="" value="Delete Passenger"> 
+                    </form>
+                    </td>
+                  </tr>
+                  <% }); %>
+                </tbody>
+              </table> <br>
+            <% } else { %>
+              <h3>No Passenger Information Availiable <button><a href="/taxi/<%= taxi._id %>/passengers/new">Add Passengers</a></button></h5>
+            <% } %>
+        </div>
             
       
         <button><a href="/taxi">Home</a></button><br>
         <button><a href="/taxi/new">Add Ride</a></button>
-</body>
-</html>
+
+<%- include('../partials/footer') %>

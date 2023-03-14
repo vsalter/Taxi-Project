@@ -1,77 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/base.css">
-	<link rel="stylesheet" href="/stylesheets/index.css">
-    <link href="/stylesheets/taxiDashboard.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-	</head>
-    <title>Welcome</title>
-</head>
-<body>
-    <%- include('../partials/header2') %>
-    <% if (user) { %>
-        success! Signed in<br><br>
-        <h2>Your Trips:</h2><br>
-
-        <title>Trips List</title>
-        <table class="table">
-        <thead>
-            <tr>
-            <th>User Name</th>
-            <th>Car Type</th>
-            <th>Pickup City</th>
-            <th>Pickup Address</th>
-            <th>Trip Date</th>
-            <th>Trip Details</th>
-            <th>Delete Trip Information</th>
-            </tr>
-        </thead>
-        <tbody>
-        <!-- Write the line of EJS to iterate over taxis using forEach -->                   
-        <% taxis.forEach(function(t) { 
-        let today = new Date()
-        let tripDate = t.departs
-        if (today > tripDate){
-        %>             
-            <tr>
-                <td><%= t.userName %></td>
-                <td><%= t.carType %></td>
-                <td><%= t.pickupCity %></td>
-                <td><%= t.pickupAddy %></td>
-                <td><%= t.departs %></td>
-                <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
-                <td>
-                    <form action="/taxi/<%= t._id %>?_method=DELETE" method="POST" id="deleteTrip">
-                    <button type="submit" form="deleteTrip">DELETE</button>
-                    </form>
-                </td>
-            </tr>            
-            <% } else { %>
-            <tr>
-                <td><%= t.carType %></td>
-                <td><%= t.pickupCity %></td>
-                <td><%= t.pickupAddy %></td>
-                <td><%= t.departs %></td>
-                <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
-                <td>
-                    <form action="/taxi/<%= t.id %>?_method=DELETE" method="POST" class="delete">
-                    <button type="submit">DELETE</button>
-                    </form>
-                </td>
-            </tr>   
-            <% }}); %>
-        </tbody>
-        </table>
-            <button><a href="/taxi/new">Add Taxi</a></button><br><br>
-            <a href="/logout">LOG OUT</a>
-    <% } else { %>
-        <a href="/auth/google" id="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <% } %>
-    
-</body>
-</html>
+<%- include('../partials/userHeader') %>
+            
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Rider Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Your Account</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">New Ride</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="/taxi/new">Request New Ride</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Ride History
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Car</th>
+                                            <th>Pickup City</th>
+                                            <th>Pickup Address</th>
+                                            <th>Pickup Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Car</th>
+                                            <th>Pickup City</th>
+                                            <th>Pickup Address</th>
+                                            <th>Pickup Time</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <% taxis.forEach(function(t) { %>
+                                        <tr>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.userName %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.carType %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.pickupCity %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.pickupAddy %></a></td>
+                                            <td><a href="/taxi/<%= t._id %>"><%= t.departs %></a></td>
+                                        </tr>
+                                        <% }); %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+        <%- include('../partials/footer') %>
