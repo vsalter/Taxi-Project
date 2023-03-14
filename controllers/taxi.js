@@ -5,7 +5,7 @@ const User = require('../models/user')
 function index(req, res){
     Taxi.find({userEmail: req.user.email}, function(err, taxis){
         if (err) return res.redirect('/');
-        res.render('taxi/index',{taxis})
+        res.render('taxi/index',{title: 'Goober - User Dashboard', taxis})
     });
 }
 
@@ -25,7 +25,7 @@ function index2(req, res){
 }
 
 function newTaxi(req, res){
-    res.render('taxi/new');
+    res.render('taxi/new', {title: 'Goober - Request New Ride'});
 }
 
 function create(req, res){
