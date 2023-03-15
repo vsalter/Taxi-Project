@@ -1,8 +1,75 @@
 <%- include('../partials/userHeader') %>
-    <h2>Start a New Ride:</h2>
-    <div class="newTaxi">
+    <div id="contact-form">
+
+        <div id="formHeader">
+            <h1>Request a New Ride</h1> 
+        </div>
+  
         <form action="/taxi/" method="POST">
-            <label>Type of Car:
+            <div>             
+                <label for="carType">
+                <span class="required">Type of Car: </span>
+                  <select id="carType" name="carType" tabindex="4">   
+                    <option class="dropdown-item disabled" default>Select Car</option>
+                    <option value="Sedan gas">Sedan gas</option> 
+                    <option value="Sedan gas">Sedan electric</option> 
+                    <option value = "Sedan electric">SUV</option>
+                    <option value="SUV">Van</option>
+                  </select>
+                </label>
+            </div>
+            <div>
+                <label for="pickupAddy">
+                <span class="required">Pickup Address: </span>
+                <input type="text" name="pickupAddy" value="" placeholder="Pickup Address" tabindex="2" required="required" />
+                </label>  
+            </div>
+            <div>             
+                <label for="pickupCity">
+                <span class="required">Pickup City: </span>
+                  <select id="pickupCity" name="pickupCity" tabindex="4">   
+                    <option value="ATL" selected>ATL</option>
+                    <option value="Macon">Macon</option>
+                    <option value="Marietta">Marietta</option>
+                    <option value="Decatur">Decatur</option>
+                    <option value="Riverdale">Riverdale</option>
+                  </select>
+                </label>
+            </div>
+            <div>
+                <label for="departs">
+                <span class="required">Pickup Time: </span>
+                <input type="datetime-local" name="departs" value="" placeholder="pickup time" tabindex="2" required="required" />
+                </label>  
+            </div>
+            <div>
+                <label for="destAddy">
+                <span class="required">Dropoff Address: </span>
+                <input type="text" name="destAddy" value="" placeholder="Dropoff Address" tabindex="2" required="required" />
+                </label>  
+            </div>
+            <div>             
+                <label for="destinationCity">
+                <span class="required">Dropoff City: </span>
+                    <select id="destinationCity" name="destinationCity" tabindex="4">   
+                        <option value="ATL" selected>ATL</option>
+                        <option value="Macon">Macon</option>
+                        <option value="Marietta">Marietta</option>
+                        <option value="Decatur">Decatur</option>
+                        <option value="Riverdale">Riverdale</option>
+                    </select>
+                </label>
+            </div>
+            <div>              
+                <button name="submit" type="submit" id="submit" >Request New Ride</button> 
+            </div>
+        </form>
+  
+    </div>
+
+<%- include('../partials/footer') %>
+
+<!-- <label>Type of Car:
                 <select name="carType">
                 <option class="dropdown-item disabled" default>Select Car</option>
                 <option value="Sedan gas">Sedan gas</option> 
@@ -29,15 +96,65 @@
             <label>Dropoff City:</label>
             <select name="destinationCity">
                 <option value="ATL">ATL</option>
-                    <option value="Macon">Macon</option>
-                    <option value="Marietta">Marietta</option>
-                    <option value="Decatur">Decatur</option>
-                    <option value="Riverdale" selected>Riverdale</option>>
+                <option value="Macon">Macon</option>
+                <option value="Marietta">Marietta</option>
+                <option value="Decatur">Decatur</option>
+                <option value="Riverdale" selected>Riverdale</option>>
             </select><br>
             <label>Dropoff Address:
                 <input type="text" name="destAddy">
             </label><br>
-            <input type="submit" value="Add Taxi">
-        </form>
-    </div>
-<%- include('../partials/footer') %>
+            <input type="submit" value="Add Taxi"> -->
+
+
+            <!-- <div id="contact-form">
+                <div>
+                  <h1>Nice to Meet You!</h1> 
+                  <h4>Have a question or just want to get in touch? Let's chat.</h4> 
+                </div>
+                  <p id="failure">Oopsie...message not sent.</p>  
+                  <p id="success">Your message was sent successfully. Thank you!</p>
+              
+                     <form method="post" action="/">
+                        <div>             
+                            <label for="carType">
+                            <span class="required">Type of Car: </span>
+                              <select id="carType" name="carType" tabindex="4">   
+                                <option class="dropdown-item disabled" default>Select Car</option>
+                                <option value="Sedan gas">Sedan gas</option> 
+                                <option value="Sedan gas">Sedan electric</option> 
+                                <option value = "Sedan electric">SUV</option>
+                                <option value="SUV">Van</option>
+                              </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="pickupAddy">
+                            <span class="required">Pickup Address: </span>
+                            <input type="text" name="pickupAddy" value="" placeholder="Your Address" tabindex="2" required="required" />
+                            </label>  
+                        </div>
+                        <div>             
+                            <label for="carType">
+                            <span>Type of Car: </span>
+                            <select id="carType" name="carType" tabindex="4">   
+                                <option class="dropdown-item disabled" default>Select Car</option>
+                                <option value="Sedan gas">Sedan gas</option> 
+                                <option value="Sedan gas">Sedan electric</option> 
+                                <option value = "Sedan electric">SUV</option>
+                                <option value="SUV">Van</option>
+                            </select>
+                            </label>
+                        </div>
+                        <div>             
+                            <label for="message">
+                            <span class="required">Message: *</span> 
+                            <textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
+                            </label>  
+                        </div>
+                        <div>              
+                            <button name="submit" type="submit" id="submit" >SEND</button> 
+                        </div>
+                     </form>
+              
+                </div> -->
