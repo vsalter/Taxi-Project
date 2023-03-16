@@ -1,0 +1,28 @@
+.currentTaxi {
+    display: grid;
+    grid: 
+        'rider rider passenger passenger'
+        'rider rider passenger passenger'
+        'rider rider passenger passenger'
+        'rider rider passenger passenger';
+    min-width: 100%;
+    min-height: 80%;
+  }
+
+#rideDetail {
+    grid-area: rider;
+    border: 3px black solid;
+    padding-top: 20px;
+    width: 80%;
+    margin: 15px 10% 0;
+    text-align: center;
+}
+
+#passengerInfo {
+    grid-area: passenger;
+    width: 80%;
+    margin: 15px 10% 0;
+    padding-top: 20px;
+    border: 3px black solid;
+    text-align: center;
+}

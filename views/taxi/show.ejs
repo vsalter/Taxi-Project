@@ -1,31 +1,65 @@
 <%- include('../partials/userHeader') %>
 
         <div class="currentTaxi">
-          <table class="table">
-              <thead>
+          <div id="rideDetail">
+            <h2>Rider Name: </h2>
+            <p><%= taxi.userName %></p>
+            <h2>Type of Car: </h2>
+            <p><%= taxi.carType %></p>
+            <h2>Pickup Address: </h2>
+            <p><%= taxi.pickupAddy %><br>
+               <%= taxi.pickupCity %>, Ga </p>
+            <!-- <th>User Email:</th>
+            <th>Type of Car</th>
+            <th>Pickup Address</th>
+            <th>Pickup City</th>
+            <th>Time of Trip</th>
+                
+            <td><%= taxi.userName %></td>
+            <td><%= taxi.userEmail %></td>
+            <td><%= taxi.carType %></td>
+            <td><%= taxi.pickupAddy %></td>
+            <td><%= taxi.pickupCity %></td>
+            <td><%= taxi.departs %></td> -->
+            <a href="/taxi/<%= taxi._id %>/update">Edit Trip</a>
+          </div>
+          <div id="passengerInfo">
+            <% if (taxi.destinations.length) { %>
+              <table class="table">
+                <thead>
                   <tr>
-                  <th>User Name:</th>
-                  <th>User Email:</th>
-                  <th>Type of Car</th>
-                  <th>Pickup Address</th>
-                  <th>Pickup City</th>
-                  <th>Time of Trip</th>
+                    <th>Destination Airport</th>
+                    <th>Arrival Date</th>
                   </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td><%= taxi.userName %></td>
-                      <td><%= taxi.userEmail %></td>
-                      <td><%= taxi.carType %></td>
-                      <td><%= taxi.pickupAddy %></td>
-                      <td><%= taxi.pickupCity %></td>
-                      <td><%= taxi.departs %></td>
-                      <td><a href="/taxi/<%= taxi._id %>/update">Edit Trip</a></td>
-                  </tr> 
-              </tbody>
-          </table>
-        </div><br>
-        <div class="passenger-info">
+                </thead>
+                <tbody>
+                  <% taxi.destinations.forEach(function(d) { %>
+                    <tr>
+                      <td><%= d.destinationCity %></td>
+                      <td><%= d.destAddy %></td>
+                    </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+            <% } else { %>
+              <h5>No Destination Information Yet</h5>
+              <div class="destTaxi">
+                <form id="desination" method="POST" action="/taxi/<%= taxi._id %>/destinations">
+                <label>Destination Airport:</label>
+                <select id="destinationCity" name="destinationCity" tabindex="4">   
+                  <option value="ATL" selected>ATL</option>
+                  <option value="Macon">Macon</option>
+                  <option value="Marietta">Marietta</option>
+                  <option value="Decatur">Decatur</option>
+                  <option value="Riverdale">Riverdale</option>
+                </select>
+                <label>Dropoff Address
+                    <input type="text" name="destAddy">
+                </label>
+                <input type="submit" value="Add Destination">
+                </form>
+              </div>
+            <% } %>
             <% if (passengers.length) { %>
               <h2>Passengers:</h2>
               <table class="table">
@@ -50,8 +84,11 @@
                 </tbody>
               </table> <br>
             <% } else { %>
-              <h3>No Passenger Information Availiable <button><a href="/taxi/<%= taxi._id %>/passengers/new">Add Passengers</a></button></h5>
+              <h3>No Passenger Information Availiable</h3> <br>
+              <button><a href="/taxi/<%= taxi._id %>/passengers/new">Add Passengers</a></button>
             <% } %>
+          </div>
         </div>
 
 <%- include('../partials/footer') %>
+

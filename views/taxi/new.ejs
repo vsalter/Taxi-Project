@@ -42,24 +42,6 @@
                 <input type="datetime-local" name="departs" value="" placeholder="pickup time" tabindex="2" required="required" />
                 </label>  
             </div>
-            <div>
-                <label for="destAddy">
-                <span class="required">Dropoff Address: </span>
-                <input type="text" name="destAddy" value="" placeholder="Dropoff Address" tabindex="2" required="required" />
-                </label>  
-            </div>
-            <div>             
-                <label for="destinationCity">
-                <span class="required">Dropoff City: </span>
-                    <select id="destinationCity" name="destinationCity" tabindex="4">   
-                        <option value="ATL" selected>ATL</option>
-                        <option value="Macon">Macon</option>
-                        <option value="Marietta">Marietta</option>
-                        <option value="Decatur">Decatur</option>
-                        <option value="Riverdale">Riverdale</option>
-                    </select>
-                </label>
-            </div>
             <div>              
                 <button name="submit" type="submit" id="submit" >Request New Ride</button> 
             </div>
@@ -68,6 +50,26 @@
     </div>
 
 <%- include('../partials/footer') %>
+
+
+<!-- <div>
+    <label for="destAddy">
+    <span class="required">Dropoff Address: </span>
+    <input type="text" name="destAddy" value="" placeholder="Dropoff Address" tabindex="2" required="required" />
+    </label>  
+</div>
+<div>             
+    <label for="destinationCity">
+    <span class="required">Dropoff City: </span>
+        <select id="destinationCity" name="destinationCity" tabindex="4">   
+            <option value="ATL" selected>ATL</option>
+            <option value="Macon">Macon</option>
+            <option value="Marietta">Marietta</option>
+            <option value="Decatur">Decatur</option>
+            <option value="Riverdale">Riverdale</option>
+        </select>
+    </label>
+</div> -->
 
 <!-- <label>Type of Car:
                 <select name="carType">

@@ -12,6 +12,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var taxiRouter = require('./routes/taxi');
+var destinationsRouter = require('./routes/destinations');
 var passengersRouter = require('./routes/passengers')
 
 
@@ -46,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/taxi', taxiRouter);
+app.use('/', destinationsRouter);
 app.use('/', passengersRouter);
 
 // catch 404 and forward to error handler
