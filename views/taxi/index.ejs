@@ -58,6 +58,7 @@
                                             <th>Pickup City</th>
                                             <th>Pickup Address</th>
                                             <th>Pickup Time</th>
+                                            <th>Details</th>
                                             <th>Delete Trip</th>
                                         </tr>
                                     </thead>
@@ -68,6 +69,7 @@
                                             <th>Pickup City</th>
                                             <th>Pickup Address</th>
                                             <th>Pickup Time</th>
+                                            <th>Details</th>
                                             <th>Delete Trip</th>
                                         </tr>
                                     </tfoot>
@@ -79,6 +81,11 @@
                                             <td><a href="/taxi/<%= t._id %>"><%= t.pickupCity %></a></td>
                                             <td><a href="/taxi/<%= t._id %>"><%= t.pickupAddy %></a></td>
                                             <td><a href="/taxi/<%= t._id %>"><%= t.departs %></a></td>
+                                            <% if (t.destinations.length) { %>
+                                                <td><a href="/taxi/<%= t._id %>">DETAILS</a></td>
+                                            <% } else { %>
+                                                <td><a href="/taxi/<%= t._id %>">Add Destination</a></td>
+                                            <% } %>    
                                             <td>
                                                 <form action="/taxi/<%= t._id %>?_method=DELETE" method="POST" id="deleteTrip">
                                                 <button type="submit" form="deleteTrip">DELETE</button>

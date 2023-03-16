@@ -28,15 +28,15 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>Destination Airport</th>
-                    <th>Arrival Date</th>
+                    <th>Dropoff Address</th>
+                    <th>Dropoff City</th>
                   </tr>
                 </thead>
                 <tbody>
                   <% taxi.destinations.forEach(function(d) { %>
                     <tr>
-                      <td><%= d.destinationCity %></td>
                       <td><%= d.destAddy %></td>
+                      <td><%= d.destinationCity %></td>
                     </tr>
                   <% }); %>
                 </tbody>
