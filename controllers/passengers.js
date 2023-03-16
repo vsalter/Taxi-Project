@@ -2,7 +2,7 @@ const Passenger = require('../models/passenger');
 
 
 function newPassenger(req, res) {
-    res.render('passengers/new', { taxiId: req.params.id });
+    res.render('passengers/new', { title: 'Goober - Add Passengers', taxiId: req.params.id });
 }
 
 function create (req, res) {
