@@ -1,35 +1,80 @@
-<% if (user) { %>
-    <header class="p-3 bg-dark text-white">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+    <header class="p-3 bg-dark text-white">
+        <div id="desktop" class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+          <ul id="navigationLinks" class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="about" class="nav-link px-2 text-white">About</a></li>
             <li><a href="faqs" class="nav-link px-2 text-white">FAQs</a></li>
             <!-- <li><a href="help" class="nav-link px-2 text-white">Help</a></li> -->
           </ul>
-          
-          <div class="text-end">
-            <a href="../taxi/" ><button type="button" class="btn btn-outline-light me-2"><%= user.name %></button></a>
-          </div>
-          <h1 id="logo"><a class="navbar-brand" href="/">Goober</a></h1>
-        </div>
-    </header>
-<% } else { %>
-    <header class="p-3 bg-dark text-white">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="about" class="nav-link px-2 text-white">About</a></li>
-            <li><a href="faqs" class="nav-link px-2 text-white">FAQs</a></li>
-            <!-- <li><a href="help" class="nav-link px-2 text-white">Help</a></li> -->
-          </ul>
+          <!-- <button id="sideNavButton" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              ...
+            </div>
+          </div> -->
   
           <h1 id="logo"><a class="navbar-brand" href="/">Goober</a></h1>
           
-          <div class="text-end">
+          <div id="loginButtons" class="text-end">
             <a href="/auth/google" id="login"><button type="button" class="btn btn-outline-light me-2">Login with <img class="google" src="https://i.imgur.com/FHjYyi0.png"></button></a>
             <a href="/auth/google"><button type="button" class="btn btn-warning">Sign-up with <img class="google" src="https://i.imgur.com/FHjYyi0.png"></button></a>
           </div>
         </div>
+
+        <nav id="mobile" class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Goober</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a href="/">Goober</a></h5>
+                <button id="closeButton" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="faqs">FAQs</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <% if (user) { %>
+                      <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= user.name %>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                        <li><a class="googleLinks" href="/taxi/" id="login">Dashboard </a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="googleLinks" href="/logout">Log Out</a></li>
+                      </ul>
+                    <% } else { %>  
+                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sign In
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                      <li><a class="googleLinks" href="/auth/google" id="login">Login with <img class="google" src="https://i.imgur.com/FHjYyi0.png"></a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="googleLinks" href="/auth/google">Sign-up with <img class="google" src="https://i.imgur.com/FHjYyi0.png"></a></li>
+                    </ul>
+                    <% } %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
     </header>
-<% } %>
