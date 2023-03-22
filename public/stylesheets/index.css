@@ -50,9 +50,17 @@
 	filter: invert(100%);
   max-width: 40px;
   }
+
+  #firstCaption {
+    left: 30px;
+  }
   
   #thirdCaption {
-    right: 7%;
+    right: 30px;
+  }
+
+  #thirdCaption h1 {
+    font-size: 30px;
   }
 
   .roundedCircles {
@@ -120,6 +128,25 @@
       display: none!important;
     }
 
+    header {
+      height: 56px;
+    }
+
+    .offcanvas {
+      background-color: black!important;
+    }
+
+    .offcanvas-header h5 a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .googleLinks {
+      padding-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
     .carousel-item {
       height: 20rem;
     }
@@ -127,6 +154,18 @@
     #carousel1 {
       min-width: 100%;
       height: 20rem;
+    }
+
+    #firstCaption {
+      left: 30px
+    }
+
+    #thirdCaption {
+      right: 10px;
+    }
+
+    #thirdCaption h1 {
+      font-size: 24px;
     }
 
 
@@ -200,6 +239,10 @@
      #thirdCaption {
       right: 5px;
     } 
+
+    #thirdCaption h1{
+      font-size: 10px;
+    }
 
   }
 
