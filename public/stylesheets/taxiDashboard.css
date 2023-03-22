@@ -642,6 +642,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
+  min-width: 100%;
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
@@ -4537,7 +4538,8 @@ textarea.form-control-lg {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: 100%;
+  width: 100%;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -11345,7 +11347,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 0;
+  min-width: fit-content;
   flex-grow: 1;
   min-height: calc(100vh - 56px);
   margin-left: -225px;
