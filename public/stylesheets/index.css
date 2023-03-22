@@ -222,11 +222,13 @@
 
     .carousel-caption h1 {
       font-size: 10px;
+      font-weight: 900;
       margin-bottom: 3px;
     }
 
     .carousel-caption p {
       font-size: 6px;
+      font-weight: 600;
       margin-bottom: 5px;
     }
 
@@ -236,12 +238,16 @@
       font-size: 5px;
     }
 
-     #thirdCaption {
+    #firstCaption {
+      left: 15px;
+    }
+
+    #thirdCaption {
       right: 5px;
     } 
 
     #thirdCaption h1{
-      font-size: 10px;
+      font-size: 8px;
     }
 
   }
