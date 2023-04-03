@@ -9,8 +9,8 @@
             <div>             
                 <label for="carType">
                 <span class="required">Type of Car: </span>
-                  <select id="carType" name="carType" tabindex="4">   
-                    <option class="dropdown-item disabled" default>Select Car</option>
+                  <select id="carType" name="carType" tabindex="4" required>   
+                    <option class="dropdown-item disabled" value="" default>Select Car</option>
                     <option value="Sedan gas">Sedan gas</option> 
                     <option value="Sedan gas">Sedan electric</option> 
                     <option value = "Sedan electric">SUV</option>
@@ -27,8 +27,9 @@
             <div>             
                 <label for="pickupCity">
                 <span class="required">Pickup City: </span>
-                  <select id="pickupCity" name="pickupCity" tabindex="4">   
-                    <option value="ATL" selected>ATL</option>
+                  <select id="pickupCity" name="pickupCity" tabindex="4" required>   
+                    <option class="dropdown-item disabled" value="" default>Select City</option>
+                    <option value="ATL">ATL</option>
                     <option value="Macon">Macon</option>
                     <option value="Marietta">Marietta</option>
                     <option value="Decatur">Decatur</option>
