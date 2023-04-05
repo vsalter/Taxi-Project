@@ -25,7 +25,7 @@ The taxi app allows you to book a trip with the State of Georgia. To book a trip
  - **Express** 
  
 ## Functionality
- - Link to app is [here](https://taxi-app-project2.herokuapp.com/)
+ - Link to app is [here](https://goober.onrender.com/)
  - The app prompts you to login with your Google account upon arriving at the index.
 ![Screen Shot 2022-09-02 at 6 10 13 PM](https://user-images.githubusercontent.com/59453943/188669912-1cf9b54a-eaf4-4ed8-bb65-637d82ecf0c6.png)
  
